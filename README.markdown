@@ -139,3 +139,147 @@ types
 
 - [Python Cookbook]()
 - [pep8 code style guide](http://pep8.org)
+
+
+***English translated***
+# Python
+
+Good readability and high development efficiency are outstanding advantages of the Python language.
+
+### Syntax
+    
+    data structure
+        
+        -list
+        -set
+        -dict
+    function
+        
+        -parameter
+    generator and coroutines
+        -
+    decorator
+        The decorator decoration function func refers to the code that automatically executes other logic before and after the execution of func.
+        
+            -The following python code is equivalent to executing f = decorator(f) statement.
+                ```python
+                # f = decorator(f)
+                @decorator
+                def f(*args, **kwargs):
+                    ...
+                ```
+            -Functions \_\_doc\_\_, \_\_anotations\_\_ and other attributes need to be kept (otherwise the \_\_doc\_\_ attribute of the function before decoration and the attribute of the function after decoration
+            \_\_doc\_\_ attributes are inconsistent), python functools.wraps function can maintain the attributes of the function.
+            -Decorating ordinary functions versus decorating methods
+                -Method belongs to Function, and the calling method of method is different from ordinary functions.
+                -It is necessary to determine whether the function is called in the method of calling.
+                -Different processing logic may be required for method.
+                
+            -All callable objects (with __call__ method defined) can be used as decorators
+        
+    metaclass
+        -
+    namespace
+        -
+    descriptor(access interception)
+        -\_\_get\_\_
+        -\_\_set\_\_
+        
+    manager context
+        -
+    
+    name mangling
+        -
+    \_\_all\_\_ mechanism
+    
+    reflection
+        -getattr
+        -
+    
+    multiple inherit
+
+\_\_dict\_\_
+dir
+types
+
+
+### Code Specification
+    
+    See [pep8](https://pep8.org).
+       
+### Test
+    
+    Common frameworks for python unit testing:
+        -pytest (recommended)
+        -doctest
+        -nosetest
+        -unittest
+    
+    Python supports BDD development mode. The frameworks that support BDD in Python are:
+        -Behave
+        -lettuce
+    
+    Python build tools:
+        -[tox](https://tox.readthedocs.io/en/latest/)
+        -[buildout](http://www.buildout.org/en/latest/)
+    
+    The above frameworks are supported by Pycharm (a visual window is provided, and tools are provided to analyze and display the construction results).
+
+### Performance Tuning
+    
+    Frameworks for analyzing program performance in python are:
+        -cProfile
+        -yappi
+        -VMprof
+    
+    These three frameworks will generate Statistics (to count the running time of each part of the code) and Call Graph (to count the calling relationships between functions).
+    pycharm supports the above framework (provides a visual user interface), and provides tools to analyze the results of the Profile (cProfile, yappi, VMprof
+    Generate .pstat, .yappi, .vmprof files respectively).
+    
+
+### Internet service
+
+    The frameworks for building network services in python are:
+        -django
+        -flask
+        -tornado
+        -I haven't used the others
+        
+### Database
+
+    The most famous framework for processing databases in Python is:
+        -SQLAchemy
+
+### Scientific Computing Data Analysis and Machine Learning
+
+    The tools used for scientific computing in python are:
+        -numpy
+        -matplotlib
+        -pandas
+        -scipy
+        -skilearn
+        -tensorflow
+
+### Build tools
+
+    The tools used to build projects in python are:
+        -tox
+        -buildout
+
+### Documentation
+
+    Python commonly used document format (docstring style) has two types:
+        -restructure text
+        -Epytext
+        
+### Log
+    Python log module:
+        -logging (very similar to log4j in Java)
+
+### Configuration file
+    Commonly used log files are ini format and yaml format
+
+### references
+
+-[Python Cookbook]()
+-[pep8 code style guide](http://pep8.org)
